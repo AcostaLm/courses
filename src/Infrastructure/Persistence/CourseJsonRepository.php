@@ -4,6 +4,7 @@ namespace App\Infrastructure\Persistence;
 
 use App\Domain\Course;
 use App\Domain\CourseRepository;
+use App\Infrastructure\CourseMapper;
 
 class CourseJsonRepository implements CourseRepository
 {
@@ -18,6 +19,6 @@ class CourseJsonRepository implements CourseRepository
     public function search(int $id): ?Course
     {
         $course = array_filter($this->data, fn($course) => $course['id'] === $id)[0] ?? null;
-        return $course;
+        return is_null($course) ? null : CourseMapper::fromArray($course);
     }
 }
