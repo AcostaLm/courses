@@ -18,7 +18,8 @@ class CourseJsonRepository implements CourseRepository
     
     public function search(int $id): ?Course
     {
-        $course = array_filter($this->data, fn($course) => $course['id'] === $id)[0] ?? null;
+        $filtered = array_filter($this->data, fn($course) => $course['id'] == $id);
+        $course = array_shift($filtered) ?? null;
         return is_null($course) ? null : CourseMapper::fromArray($course);
     }
 }

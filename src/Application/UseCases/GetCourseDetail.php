@@ -14,7 +14,7 @@ class GetCourseDetail
         $this->repository = $courseRepository;
     }
     
-    public function __invoke($id): Course
+    public function __invoke($id): ?Course
     {
         return $this->repository->search($id);
     }
