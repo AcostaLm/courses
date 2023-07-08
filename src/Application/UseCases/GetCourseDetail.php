@@ -16,6 +16,6 @@ class GetCourseDetail
     
     public function __invoke($id): Course
     {
-        return new Course($id);
+        return $this->repository->search($id);
     }
 }

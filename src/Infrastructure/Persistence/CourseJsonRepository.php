@@ -9,6 +9,6 @@ class CourseJsonRepository implements CourseRepository
 {
     public function search(int $id): ?Course
     {
-        return new Course($id);
+        return new Course(1, "Curso 1", "Descrip", 9.99, []);
     }
 }
