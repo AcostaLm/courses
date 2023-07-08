@@ -2,12 +2,15 @@
 
 namespace App\Application\Controller;
 
+use App\Application\UseCases\GetCourseDetail;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class CourseController
+class CourseController extends AbstractController
 {
-    public function show(int $id): JsonResponse
+    public function show(int $id, GetCourseDetail $getCourseDetail): JsonResponse
     {
-        return new JsonResponse($id);
+        $course = $getCourseDetail($id);
+        return new JsonResponse($course);
     }
 }
