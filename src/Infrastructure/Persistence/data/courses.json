@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "title": "Curso de Javascript de 0 a heroe",
+        "description": "Aprende el Lenguaje de Programación Web más usado paso a paso",
+        "price": 12.99,
+        "reviews": [
+            {
+                "userName": "Luis Acosta",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+                "rating": 5
+            },
+            {
+                "userName": "Miguel Gonzalez",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+                "rating": 5
+            },
+            {
+                "userName": "Juan Carlos",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "C# desde 0: Inicia tu carrera como programador",
+        "description": "Tu guía definitiva para aprender a programar",
+        "price": 19.99,
+        "reviews": [
+            {
+                "userName": "Javier Garcia",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+                "rating": 5
+            },
+            {
+                "userName": "Carlos Gonzalez",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Visual Studio 2022 C# - Nivel Intermedio",
+        "description": "C# Nivel Intermedio",
+        "price": 29.99,
+        "reviews": [
+            {
+                "userName": "Javier Garcia",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+                "rating": 5
+            },
+            {
+                "userName": "Sergio Primero",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Visual Studio 2022 C# - Nivel Básico",
+        "description": "C# Nivel Básico",
+        "price": 19.99,
+        "reviews": [
+            {
+                "userName": "Ana Ortiz",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+                "rating": 5
+            },
+            {
+                "userName": "Julio Rivas",
+                "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Visual Studio 2022 C# - Nivel Médio",
+        "description": "C# Nivel Médio",
+        "price": 24.99,
+        "reviews": [
+            {
+                "userName": "Javier Garcia",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+                "rating": 5
+            },
+            {
+                "userName": "Carlos Gonzalez",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+                "rating": 1
+            },
+            {
+                "userName": "Ana Ortiz",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+                "rating": 5
+            },
+            {
+                "userName": "Julio Rivas",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+                "rating": 4
+            }
+        ]
+    }
+]
