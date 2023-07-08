@@ -7,8 +7,17 @@ use App\Domain\CourseRepository;
 
 class CourseJsonRepository implements CourseRepository
 {
+    private array $data;
+
+    public function __construct()
+    {
+        $fileContent = file_get_contents(__DIR__. '/data/courses.json');
+        $this->data = json_decode($fileContent, true);
+    }
+    
     public function search(int $id): ?Course
     {
-        return new Course(1, "Curso 1", "Descrip", 9.99, []);
+        $course = array_filter($this->data, fn($course) => $course['id'] === $id)[0] ?? null;
+        return $course;
     }
 }
