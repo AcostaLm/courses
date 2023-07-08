@@ -13,7 +13,7 @@ class CourseMapper
             "title" => $course->title(),
             "description" => $course->description(),
             "price" => $course->price(),
-            "is_top" => true, // TODO: implement methods for top courses
+            "is_top" => $course->isTop(),
             "reviews" => array_map(fn($review) => ReviewMapper::toArray($review), $course->reviews())
         ];
     }
@@ -21,10 +21,10 @@ class CourseMapper
     public static function fromArray(array $data): Course
     {
         return new Course(
-            $data["id"],
+            (int) $data["id"],
             $data["title"],
             $data["description"],
-            $data["price"],
+            floatval($data["price"]),
             array_map(fn($review) => ReviewMapper::fromArray($review), $data["reviews"])
         );
     }

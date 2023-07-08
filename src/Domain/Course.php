@@ -10,6 +10,8 @@ class Course
     private float $price;
     private array $reviews;
 
+    const MIN_RATING_TOP = 5;
+
     public function __construct(int $id, string $title, string $description, float $price, array $reviews)
     {
         $this->id = $id;
@@ -42,6 +44,19 @@ class Course
     public function reviews(): array
     {
         return $this->reviews;
+    }
+
+    public function isTop(): bool
+    {
+        return $this->rating() >= self::MIN_RATING_TOP;
+    }
+
+    private function rating(): float
+    {
+        $rating = 0;
+        foreach ($this->reviews as $review)
+            $rating += $review->rating();
+        return $rating / count($this->reviews);
     }
 
 }
